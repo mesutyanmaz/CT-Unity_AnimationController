@@ -13,13 +13,22 @@ public class AnimationController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.W))
         {
-            animator.SetBool("isRotate", true);
+            animator.SetBool("isWalking", true);
         }
         else
         {
-            animator.SetBool("isRotate", false);
+            animator.SetBool("isWalking", false);
         }
+        if (Input.GetKey(KeyCode.Space))
+        {
+            animator.SetBool("isJumping", true);
+        }
+        else
+        {
+            animator.SetBool("isJumping", false);
+        }
+
     }
 }
